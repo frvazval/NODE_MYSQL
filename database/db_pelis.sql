@@ -1,6 +1,8 @@
 create database db_pelis;
 use db_pelis;
 
+-- TABLAS
+
 create table pelis (
 id_peli int not null primary key auto_increment,
 titulo_peli varchar(200) not null,
@@ -25,6 +27,8 @@ id_peli_genero int not null primary key auto_increment,
 id_peli int not null,
 id_genero int not null
 );
+
+-- INSERTS
 
 insert into generos (nombre_genero) values
 ("Drama"),("Comedia"),("Aventuras"),("Fantastica"),("Ciencia Ficcion"),("Terror"),("Romantica"),("Suspense"),("Historica");
