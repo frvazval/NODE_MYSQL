@@ -2,8 +2,8 @@ import express from "express";
 import path from "node:path";
 const app = express();
 
+// Conecta con la base de datos
 import {connection} from "../mysql/mysql.js";
-
 
 process.loadEnvFile();
 const PORT = process.env.PORT || 3000;

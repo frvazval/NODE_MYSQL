@@ -2,6 +2,7 @@ import mysql from "mysql2";
 
 process.loadEnvFile();
 
+// Recupera los valores del archivo .env
 const configConnection = {
     host : process.env.DB_HOST,
     user : process.env.DB_USER,
