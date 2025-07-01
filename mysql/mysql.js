@@ -11,4 +11,5 @@ const configConnection = {
     database : process.env.DATABASE
 };
 
+// Para poder importarlo en app.js
 export const connection = mysql.createConnection(configConnection);
