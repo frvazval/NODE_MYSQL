@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -20,6 +20,7 @@ header {
         margin: 0 auto;
         color: white;
 
+
         span {
             color: #f8c601;
         }
@@ -29,11 +30,16 @@ header {
 
 h1 {
     font-size: 2.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 main {
     max-width: var(--anchura-desktop);
     margin: 0 auto;
+}
+
+h2 {
+    margin: 2rem 0;
 }
 
 .card {
@@ -42,11 +48,31 @@ main {
     justify-content: space-between;
     flex-wrap: wrap;
 
+
     div {
         max-width: 200px;
+        border: 2px solid darkblue;
+        border-radius: 10px;
     }
 
     img {
         width: 100%;
     }
+
+    h3, p {
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
 }

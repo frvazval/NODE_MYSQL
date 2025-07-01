@@ -32,4 +32,9 @@ app.get("/", (req, res) => {
 
 });
 
+app.get("/peli/:id", (req, res) => {
+    const id = req.params.id;
+    res.send("ok");
+})
+
 app.listen(PORT, () => {console.log(`Servidor levantado en http://localhost:${PORT}`)})
