@@ -30,3 +30,23 @@ header {
 h1 {
     font-size: 2.5rem;
 }
+
+main {
+    max-width: var(--anchura-desktop);
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    div {
+        max-width: 200px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
