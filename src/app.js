@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
     const query = "SELECT * FROM pelis";
     connection.query(query, (err, result, fields) => {
         if (err) throw err;
-        res.json(result)
+        res.json(result);
     })
 
 });
