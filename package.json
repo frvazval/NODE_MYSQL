@@ -1,0 +1,25 @@
+{
+  "name": "node_mysql",
+  "version": "1.0.0",
+  "description": "Aplicacion de peliculas",
+  "keywords": [
+    "Node",
+    "Express",
+    "EJS"
+  ],
+  "homepage": "https://github.com/frvazval/NODE_MYSQL#readme",
+  "bugs": {
+    "url": "https://github.com/frvazval/NODE_MYSQL/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frvazval/NODE_MYSQL.git"
+  },
+  "license": "ISC",
+  "author": "Paco",
+  "type": "commonjs",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
