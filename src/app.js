@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
         if (err) throw err;
         // res.json(result);
 
-        res.render("index", result);
+        res.render("index", {result});
     });
 
 });

@@ -8,8 +8,20 @@
 
 </head>
 <body>
-    <%- include("templates/header") %>
-    
-    
+    <%- include("templates/header") %>    
+    <main>
+        <h2>Todas las peliculas</h2>
+        <div>
+            <% result.forEach(peli => { %>
+                <a href="">
+                    <div>
+                        <h3><%= peli.titulo_peli %></h3>
+                        <p><%= peli.fecha %></p>
+                        <img src="<%= peli.imagen_peli %>" alt="<% peli.titulo_peli %>">                        
+                    </div>
+                </a>
+            <% }) %>
+        </div>
+    </main>    
 </body>
 </html>
