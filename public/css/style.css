@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root {
+    --color-fondo: steelblue;
+    --anchura-desktop: 900px;
+}
+
+header {
+    background-color: var(--color-fondo);
+    padding: 1rem;   
+    
+    div {
+        max-width: var(--anchura-desktop);
+        margin: 0 auto;
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+}
