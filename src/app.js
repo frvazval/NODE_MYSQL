@@ -7,11 +7,21 @@ import {connection} from "../mysql/mysql.js";
 
 process.loadEnvFile();
 const PORT = process.env.PORT || 3000;
+
+// Ruta de los ficheros estaticos (css, javascript, etc...)
+app.use(express.static(path.join(__dirname, "public")));
+
+// Ruta de las plantillas
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+
 app.get("/", (req, res) => {
     const query = "SELECT * FROM pelis";
     connection.query(query, (err, result, fields) => {
         if (err) throw err;
-        res.json(result);
+        // res.json(result);
+
+        res.render("index", result);
     });
 
 });
