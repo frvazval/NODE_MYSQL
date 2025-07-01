@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
     connection.query(query, (err, result, fields) => {
         if (err) throw err;
         res.json(result);
-    })
+    });
 
 });
 
