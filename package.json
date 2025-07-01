@@ -5,7 +5,8 @@
   "keywords": [
     "Node",
     "Express",
-    "EJS"
+    "EJS",
+    "MySQL"
   ],
   "homepage": "https://github.com/frvazval/NODE_MYSQL#readme",
   "bugs": {
@@ -17,7 +18,7 @@
   },
   "license": "ISC",
   "author": "Paco",
-  "type": "commonjs",
+  "type": "module",
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
