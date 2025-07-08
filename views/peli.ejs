@@ -8,20 +8,27 @@
 
 </head>
 <body>
-    <%- include("templates/header") %>    
+    <%- include("templates/header") %>   
+     
     <main>
-        <h2>Todas las peliculas</h2>
-        <div class="card">
-            <% result.forEach(peli => { %>
-                <a href="/peli/<%= peli.id_peli %>">
-                    <div>   
-                        <h3><%= peli.titulo_peli %></h3>                     
-                        <img src="<%= peli.imagen_peli %>" alt="<% peli.titulo_peli %>">                           
-                        <p><%= peli.fecha %></p>                     
-                    </div>
-                </a>
-            <% }) %>
+        <div>
+            <section>
+                <h2><span><%= result[0].titulo_peli %></span></h2>
+                <p>Director: <span><%= result[0].nombre_director %></span></p>
+                <p>Año estreno: <span><%= result[0].fecha %></span></p>
+                <p>Generos: 
+                    <% result.forEach(peli => { %>
+                        <span><%= peli.nombre_genero %></span>
+                    <% }) %>
+                </p>
+                <p>Sinopsis:</p>
+                <p><%= result[0].sinopsis %></p>
+            </section>
+            <section>
+                <img src="<%= result[0].imagen_peli %>" alt="Poster de ">
+            </section>
         </div>
+        
     </main>    
 </body>
 </html>
