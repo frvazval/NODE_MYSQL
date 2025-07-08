@@ -51,4 +51,24 @@ app.get("/peli/:id", (req, res) => {
     
 })
 
+app.get("/genero/:nombre", (req, res) => {
+    let genero = req.params.nombre.replaceAll("-", " ");
+    console.log(genero);
+   
+    const query = `SELECT d.nombre_director, g.nombre_genero, p.titulo_peli, p.fecha, p.imagen_peli, p.valoracion, p.sinopsis
+                    FROM directores d
+                    NATURAL JOIN pelis p
+                    NATURAL JOIN pelis_generos pg
+                    NATURAL JOIN generos g
+                    WHERE g.nombre_genero = '${genero}'`;
+
+    connection.query(query, (err, result, fields) => {
+        if (err) throw err;        
+
+        res.render("index", {result});
+    });
+    
+    
+})
+
 app.listen(PORT, () => {console.log(`Servidor levantado en http://localhost:${PORT}`)})

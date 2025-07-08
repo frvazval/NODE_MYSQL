@@ -18,8 +18,10 @@
                 <p>Director: <span><%= result[0].nombre_director %></span></p>
                 <p>Año estreno: <span><%= result[0].fecha %></span></p>
                 <p>Generos: 
-                    <% result.forEach(peli => { %>
-                        <span><%= peli.nombre_genero %></span>
+                    <% result.forEach(peli => {
+                        let genero = peli.nombre_genero.replaceAll(" ", "-") ;
+                        %>
+                        <a href="/genero/<%= genero %>"><span><%= peli.nombre_genero %></span></a>
                     <% }) %>
                 </p>
                 <p>Valoración: <span><%= result[0].valoracion %></span></p>
