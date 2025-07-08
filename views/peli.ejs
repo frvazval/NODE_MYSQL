@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buenas Pelis</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/icons/palomitas.svg" type="image/x-icon">
 
 </head>
 <body>
@@ -21,6 +22,7 @@
                         <span><%= peli.nombre_genero %></span>
                     <% }) %>
                 </p>
+                <p>Valoración: <span><%= result[0].valoracion %></span></p>
                 <p>Sinopsis:</p>
                 <p><%= result[0].sinopsis %></p>
             </section>
