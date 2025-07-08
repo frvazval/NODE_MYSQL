@@ -12,6 +12,9 @@ imagen_peli text,
 valoracion decimal(3,1) unsigned not null
 );
 
+alter table pelis
+add column sinopsis text;
+
 create table directores (
 id_director int not null primary key auto_increment,
 nombre_director varchar(255) not null
