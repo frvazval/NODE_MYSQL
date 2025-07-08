@@ -23,17 +23,19 @@ app.set("views", path.join(__dirname, "..", "views"));
 
 app.get("/", (req, res) => {
     const query = "SELECT * FROM pelis";
+    let subtitulo = "Todas las películas"
     connection.query(query, (err, result, fields) => {
         if (err) throw err;
         // res.json(result);
 
-        res.render("index", {result});
+        res.render("index", {result, subtitulo});
     });
 
 });
 
 app.get("/peli/:id", (req, res) => {
     const id = req.params.id;
+    
    
     const query = `SELECT d.nombre_director, g.nombre_genero, p.titulo_peli, p.fecha, p.imagen_peli, p.valoracion, p.sinopsis
                     FROM directores d
@@ -53,9 +55,9 @@ app.get("/peli/:id", (req, res) => {
 
 app.get("/genero/:nombre", (req, res) => {
     let genero = req.params.nombre.replaceAll("-", " ");
-    console.log(genero);
+    let subtitulo = genero   
    
-    const query = `SELECT d.nombre_director, g.nombre_genero, p.titulo_peli, p.fecha, p.imagen_peli, p.valoracion, p.sinopsis
+    const query = `SELECT p.id_peli, g.nombre_genero, p.titulo_peli, p.fecha, p.imagen_peli
                     FROM directores d
                     NATURAL JOIN pelis p
                     NATURAL JOIN pelis_generos pg
@@ -65,7 +67,7 @@ app.get("/genero/:nombre", (req, res) => {
     connection.query(query, (err, result, fields) => {
         if (err) throw err;        
 
-        res.render("index", {result});
+        res.render("index", {result, subtitulo});
     });
     
     

@@ -10,8 +10,8 @@
 </head>
 <body>
     <%- include("templates/header") %>    
-    <main>
-        <h2>Todas las peliculas</h2>
+    <main>                      
+        <h2><%= subtitulo %></h2>
         <div class="card">
             <% result.forEach(peli => { %>
                 <a href="/peli/<%= peli.id_peli %>">
